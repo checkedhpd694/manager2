@@ -1,0 +1,115 @@
+<?php
+include'firewall.php';
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Facefuck, auto kết bạn, facebook takipçi hilesi, facebook arkadaş hilesi, facebook abone hilesi, beğeni hilesi, auto friend requests, auto follower, facebook auto friend request,auto friend requester, Facebook Takipci Hilesi, Arkadaş Kasma Hilesi, Facebook Auto Friend Requester" /> 
+<meta name="description" content="VipFb.Biz | Facebook Auto Friend Requester | Auto Follower | Auto Friend Requests" />
+<title>VipFb.Biz - Firewall | Facebook Auto Friend Request | Auto Friend Request | Auto Follow</title>
+<style type="text/css">
+<!--
+body {
+background-color:#ece9d8;
+background-repeat:repeat;
+}
+
+div {
+background-color:#FFF;
+background-repeat:repeat;
+height:385px;
+padding-left:20px;
+padding-right:20px;
+padding-top:20px;
+text-align:center;
+width:700px;
+border-color:#CCC;
+border-style:solid;
+border-width:1px;
+margin:100px auto auto;
+}
+
+a:link {
+color:#00F;
+text-decoration:none;
+}
+
+a:hover {
+color:#00F;
+text-decoration:underline;
+}
+
+a:active {
+color:red;
+text-decoration:underline;
+}
+.knight{
+	background:url("./img/knight.png") no-repeat;
+	width:100px;
+	height:110px;
+	margin:0px auto;
+}
+.btn {
+	border: none;
+	background: #34495e;
+	color: white;
+	font-size: 16.5px;
+	text-decoration: none;
+	text-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: 0.25s;
+	-moz-transition: 0.25s;
+	-o-transition: 0.25s;
+	transition: 0.25s;
+	-webkit-backface-visibility: hidden;
+}
+.btn.btn-red {
+	background-color: #e74c3c;
+	padding: 11px 19px;
+	font-size: 17.5px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	cursor:pointer;
+	font-family: "Segoe UI","Segoe","Segoe WP","Tahoma","Verdana","Arial","sans-serif";
+}
+-->
+</style>
+</head>
+<style type="text/css">html,body{width:100%;height:100%;margin:0;padding:0;}h1{font-size:1.5em;color:#404040;text-align:center;}p{font-size:1em;color:#404040;text-align:center;margin:10px 0 0 0;}#spinner{margin:0 auto 30px auto;display:block;}.attribution{margin-top:20px;}@-webkit-keyframes bubbles{33%: { -webkit-transform: translateY(10px); transform: translateY(10px); } 66% { -webkit-transform: translateY(-10px); transform: translateY(-10px); } 100% { -webkit-transform: translateY(0); transform: translateY(0); } }
+    @keyframes bubbles { 33%: { -webkit-transform: translateY(10px); transform: translateY(10px); } 66% { -webkit-transform: translateY(-10px); transform: translateY(-10px); } 100% { -webkit-transform: translateY(0); transform: translateY(0); } }
+    .bubbles { background-color: #404040; width:15px; height: 15px; margin:2px; border-radius:100%; -webkit-animation:bubbles 0.6s 0.07s infinite ease-in-out; animation:bubbles 0.6s 0.07s infinite ease-in-out; -webkit-animation-fill-mode:both; animation-fill-mode:both; display:inline-block; }
+  </style>
+<?php
+$text=$HTTP_SERVER_VARS['QUERY_STRING'];
+$text = preg_replace("#php\&#si",'php?',$text);
+echo('
+<center>
+<div class=khung>
+<div class="knight"></div>
+<br>
+<div class="bubbles"></div>
+<div class="bubbles"></div>
+<div class="bubbles"></div>
+<h2>Checking your browser before accessing VipFb.Biz.</h2>
+<p class="arest2k1">This process is automatic. Your browser will redirect to your requested content shortly.</p>
+Please Allow up to <font color="red"><span id="time">5</span></font> second
+<br>
+<br>
+<a class="btn btn-red" href="/"><b>Or Click here</b></a>
+</div><br>Firewall V1.0 @ 2017 <font color="blue"><a href="https://www.facebook.com/AresT2k1.Dz">Hoàng Mạnh Tuấn</a></font></center>');
+?>
+<script type="text/javascript">
+var jgt = 5; document.getElementById('time').innerHTML = jgt;
+function stime(){document.getElementById('time').innerHTML = jgt; jgt = jgt - 1;
+if(jgt == 0){clearInterval(timing);
+location = '/';
+}
+}
+var timing = setInterval("stime();",1000);
+</script>
+</body>
+</html>

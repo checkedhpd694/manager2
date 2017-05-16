@@ -1,0 +1,25 @@
+RewriteEngine on
+ErrorDocument 404 /404.html
+ErrorDocument 400 /404.html
+ErrorDocument 401 /404.html
+ErrorDocument 403 /404.html
+ErrorDocument 500 /404.html
+
+RewriteEngine on
+RewriteRule ^index.html$ index.php [L]
+RewriteRule ^welcome.html$ welcome.php [L]
+RewriteRule ^autorequest.html$ autorequest.php [L]
+
+RewriteEngine off
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?vipfb.biz [NC]
+RewriteRule !anti_ddos.phtml http://vipfb.biz/anti_ddos.phtml?%{REQUEST_URI} [QSA]
+
+<Files config.php>; 
+    order allow,deny 
+    deny from all 
+</Files>
+
+<Files error_log>; 
+    order allow,deny 
+    deny from all 
+</Files>
